@@ -29,13 +29,16 @@
         <action name="adminService" class="com.integration.action.admin.AdminServiceAction">
             <result name="loginSuc" type="redirect">/info/adminInfo.jsp</result>
             <result name="input" type="redirect">/adminLogin.jsp</result>
+            <allowed-methods>login,loginOut</allowed-methods>
         </action>
         <action name="saveUser" class="com.integration.action.user.SaveUserAction">
             <result name="success" type="redirect">
                 <param name="actionName">listUser.action</param>
             </result>
             <result name="regSuc" type="dispatcher">/info/userInfo.jsp</result>
+            <allowed-methods>register</allowed-methods>
         </action>
+
     </package>
     <!-- 用户登录后才能访问的action -->
     <package name="authority" extends="struts-default" namespace="">
@@ -55,10 +58,12 @@
             <result name="success" type="dispatcher">/order/add.jsp</result>
             <result name="addSuc" type="redirect">orderService.action</result>
             <result name="addFail" type="dispatcher">/info/result.jsp</result>
+            <allowed-methods>add</allowed-methods>
         </action>
         <action name="orderService" class="com.integration.action.order.OrderServiceAction">
             <result name="success" type="dispatcher">/info/orderInfo.jsp</result>
             <result name="delSuc" type="dispatcher">/info/result.jsp</result>
+            <allowed-methods>delete</allowed-methods>
         </action>
     </package>
 
@@ -81,6 +86,7 @@
         <action name="saveUser" class="com.integration.action.user.SaveUserAction">
             <result name="success" type="redirect">listUser.action
             </result>
+            <allowed-methods>register</allowed-methods>
         </action>
 
         <action name="listUser" class="com.integration.action.user.ListUserAction">
