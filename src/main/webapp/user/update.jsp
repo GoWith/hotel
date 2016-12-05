@@ -15,36 +15,36 @@
 					修改用户
 				</center> </font>
 		</h1>
+
 		<s:form action="updateUser">
 			<table>
 				<tr>
 					<td>
-						<s:hidden name="user.userid" value="%{user.userid}"></s:hidden>
+						<s:hidden name="user.userid" value="%{#session.user.userid}"></s:hidden>
 					</td>
 				</tr>
 				<tr>
 					<td>
-						<s:textfield name="user.username" value="%{user.username}"
+						<s:textfield name="user.username" value="%{#session.user.username}"
 							label="用户名" readonly="true"></s:textfield>
-
 					</td>
 				</tr>
 				<tr>
 					<td>
-						<!--<s:password name="user.password" value="%{user.password}" label="密码"></s:password>-->
-						<s:textfield name="user.password" value="%{user.password}"
+						<!--<s:password name="user.password" value="%{#session.user.password}" label="密码"></s:password>-->
+						<s:textfield name="user.password" value="%{#session.user.password}"
 							label="密码"></s:textfield>
 					</td>
 				</tr>
 				<tr>
 					<td>
-						<s:textfield name="user.mobile" value="%{user.mobile}"
+						<s:textfield name="user.mobile" value="%{#session.user.mobile}"
 							label="手机号码"></s:textfield>
 					</td>
 				</tr>
 				<tr>
 					<td>
-						<s:textfield name="user.email" value="%{user.email}" label="邮箱地址"></s:textfield>
+						<s:textfield name="user.email" value="%{#session.user.email}" label="邮箱地址"></s:textfield>
 					</td>
 				</tr>
 				<tr>
@@ -55,4 +55,5 @@
 			</table>
 		</s:form>
 	</body>
+	<s:debug></s:debug>
 </html>

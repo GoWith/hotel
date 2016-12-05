@@ -21,7 +21,7 @@ function del() {
 					房间列表
 				</center> </font>
 		</h1>
-		<s:a href="/hotel/room/add.jsp">增加房间</s:a>
+		<s:a href="/room/add.jsp">增加房间</s:a>
 		<table border="1" width="80%" align="center">
 			<tr>
 				<td>
@@ -42,7 +42,7 @@ function del() {
 				<td>删除</td>
 				<td>更新</td>
 			</tr>
-			<s:iterator value="#request.list" id="room">
+			<s:iterator value="#request.list" var="room">
 				<tr>
 					<td>
 						<s:property value="#room.roomid" />

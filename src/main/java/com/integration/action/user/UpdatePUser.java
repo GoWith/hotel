@@ -2,7 +2,10 @@ package com.integration.action.user;
 
 import com.integration.entity.User;
 import com.integration.service.UserService;
+import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
+
+import java.util.Map;
 
 public class UpdatePUser extends ActionSupport {
 	private User user;

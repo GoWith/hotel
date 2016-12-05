@@ -41,7 +41,7 @@
 			<td>状态</td>
 			<td>操作</td>
 		</tr>
-		<s:iterator value="#request.listRoom" id="room">
+		<s:iterator value="#request.listRoom" var="room">
 			<tr>
 				<td><s:property value="#room.roomid" /></td>
 				<td><s:property value="#room.name" /></td>

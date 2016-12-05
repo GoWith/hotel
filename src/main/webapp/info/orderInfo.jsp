@@ -32,7 +32,7 @@
 				</td> 
 			<td>²Ù×÷</td>
 		</tr>
-		<s:iterator value="#request.listUserRoom" id="room">
+		<s:iterator value="#request.listUserRoom" var="room">
 			<tr>
 				<td><s:property value="#room.roomid" /></td>
 				<td><s:property value="#room.name" /></td>

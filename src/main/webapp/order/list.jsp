@@ -26,7 +26,7 @@
 	<th>房间型号</th>
 	<th>房间状态</th>
 	</tr>
-	<s:iterator value="#request.listAllRoom" id="room">
+	<s:iterator value="#request.listAllRoom" var="room">
 	<tr>
 	<td><s:property value="#room.roomid"></s:property></td>
 	<td><s:property value="#room.name"></s:property></td>

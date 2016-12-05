@@ -24,7 +24,7 @@
             <result name="input" type="redirect">/login.jsp</result>
             <result name="userUpdate" type="dispatcher">/info/changePwd.jsp</result>
             <result name="updateSuc" type="dispatcher">/info/result.jsp</result>
-            <allowed-methods>login</allowed-methods>
+            <allowed-methods>login,userUpdateInfo,updateUser</allowed-methods>
         </action>
         <action name="adminService" class="com.integration.action.admin.AdminServiceAction">
             <result name="loginSuc" type="redirect">/info/adminInfo.jsp</result>
@@ -83,7 +83,7 @@
             <result name="login">/adminLogin.jsp</result>
         </global-results>
 
-        <action name="saveUser" class="com.integration.action.user.SaveUserAction">
+        <action name="saveAdmin" class="com.integration.action.user.SaveUserAction">
             <result name="success" type="redirect">listUser.action
             </result>
             <allowed-methods>register</allowed-methods>

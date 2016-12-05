@@ -44,7 +44,7 @@ function del() {
 				<td> 
 					ÐÞ¸Ä<br></td>
 			</tr>
-			<s:iterator value="#request.list" id="us">
+			<s:iterator value="#request.list" var="us">
 				<tr>
 					<td>
 						<s:property value="#us.userid" />
