@@ -10,7 +10,7 @@
 	</head>
 	<body>
 		<h1>
-			<font color="red">新用户注册2</font>
+			<font color="red">新用户注册</font>
 		</h1>
 		<s:form action="saveUser">
 			<s:textfield name="user.username" label="用户名"></s:textfield>
